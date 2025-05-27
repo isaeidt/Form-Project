@@ -1,0 +1,167 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: #ffffff;
+    color: #1E1E1E;
+    user-select: none;
+    }
+
+input, button, body, textarea{
+    
+    font-size: 10px;
+    line-height: 2rem;
+}
+
+.container{
+    display: flex;
+    margin: 100px auto; 
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid;
+    border-radius: 10px;
+    border-color: #646060c2;
+    
+}
+
+.infos{
+    display: flex;
+    margin: 20px;
+    gap:30px;
+    align-items: center;
+}
+
+.info_contato{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap:8px;
+    font-weight: bold;
+    
+}
+.info_empresa{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap:8px;
+    font-weight: bold;
+}
+
+.info_projeto{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    font-weight: bold;
+    gap:8px;
+}
+
+.apagado{
+    color: #1e1e1e8f;
+}
+
+.num {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+    background-color: #633BBC;
+    border-radius: 50%;
+    font-size: 10px;
+    color: #ffffff;
+    text-align: center;
+}
+
+.num_escondido{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+    background-color: #36353893;
+    border-radius: 50%;
+    font-size: 10px;
+    color: #ffffff;
+    text-align: center;
+}
+.num_feito{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+    background-color: #2b7514;
+    border-radius: 50%;
+    font-size: 10px;
+    color: #ffffff;
+    text-align: center;
+}
+
+.inputs_dados{
+    display: flex;
+    width: 80%;
+    
+}
+.infos img{
+    width: 18px;
+    height: 18px;
+}
+
+form label {
+    font-weight: bold;
+}
+
+
+form input{
+    width: 120%;
+    height: 40px ;
+    border: 1.5px solid;
+    border-color: #1e1e1e8c;
+    padding: 8px;
+    border-radius: 4px;
+    outline: 0;
+}
+
+form button{
+    width: 90px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    transform: translate(230px);
+    border: none;
+    font-weight: bold;
+    border-radius: 4px;
+    color: #ffffff;
+    background-color: #633BBC;
+}
+
+form button:hover{
+    background-color: #643bbcbd;
+}
+
+form input:hover{
+    border-color: #633BBC;
+}
+
+#seuNegocio{
+    width: 120%;
+    height: 40px ;
+    border: 1.5px solid;
+    border-color: #1e1e1e8c;
+    padding: 8px;
+    border-radius: 4px;
+    outline: 0
+}
+
+
+

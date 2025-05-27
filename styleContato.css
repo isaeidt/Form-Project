@@ -92,7 +92,18 @@ input, button, body{
     color: #ffffff;
     text-align: center;
 }
-
+.num_feito{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+    background-color: #2b7514;
+    border-radius: 50%;
+    font-size: 10px;
+    color: #ffffff;
+    text-align: center;
+}
 
 .inputs_dados{
     display: flex;
