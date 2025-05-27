@@ -160,4 +160,16 @@ input[type=number] {
 
 }
 
+.input_nome.disable input{
+    border-color: #c91c1c;
+}
+
+.input_telefone.disable input{
+    border-color: #c91c1c;
+}
+
+.input_email.disable input{
+    border-color: #c91c1c;
+}
+
 
