@@ -123,7 +123,7 @@ form label {
 }
 
 
-form input{
+form textarea{
     width: 120%;
     height: 40px ;
     border: 1.5px solid;
@@ -166,15 +166,7 @@ form input:hover{
     border-color: #633BBC;
 }
 
-#seuNegocio{
-    width: 120%;
-    height: 40px ;
-    border: 1.5px solid;
-    border-color: #1e1e1e8c;
-    padding: 8px;
-    border-radius: 4px;
-    outline: 0
-}
+
 
 
 
