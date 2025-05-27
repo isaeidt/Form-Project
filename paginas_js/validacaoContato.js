@@ -7,6 +7,8 @@ const inputEmail = document.querySelector('#email')
 form.onsubmit = function(event){
     event.preventDefault()
     validandoNome()
+    validandoTelefone()
+    validandoEmail()
 }
 
 
@@ -18,8 +20,15 @@ function validandoNome(){
 }
 
 function validandoTelefone(){
-    const valorNome = inputNome.value
-     if(valorNome.length < 8 ){
+    const valorTelefone = inputTelefone.value
+     if(valorTelefone.length < 8 ){
         alert('O número digitado está incorreto')
      }
+}
+
+function validandoEmail(){
+    const valorEmail = inputEmail.value
+    if(!valorEmail.includes("@")){
+        alert('O e-mail digitado está incorreto')
+    }
 }
