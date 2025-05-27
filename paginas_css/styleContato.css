@@ -150,8 +150,14 @@ form input:hover{
     border-color: #633BBC;
 }
 
-/* hr {
- nn sei pq essa bosta nn ta na tela
-} */
+input[type=number]::-webkit-inner-spin-button { 
+    -webkit-appearance: none;
+    
+}
+input[type=number] { 
+   -moz-appearance: textfield;
+   appearance: textfield;
+
+}
 
 

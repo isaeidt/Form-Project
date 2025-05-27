@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styleContato.css">
+    <link rel="stylesheet" href="../paginas_css/styleContato.css">
     <title>Form</title>
+    <script src="../paginas_validacoes/validacaoContato.js" type="module" defer ></script>
+
 </head>
 <body>
 <div class="container">
@@ -14,14 +16,14 @@
                 <p>1</p>
             </div>
             <p>Contato</p>
-            <img src="img/seta.png" alt="seta">
+            <img src="../img/seta.png" alt="seta">
         </div>
         <div class="info_empresa">
             <div class="num_escondido">
                 <p>2</p>
             </div>
             <p>Empresa</p>
-            <img src="img/seta.png" alt="seta">
+            <img src="../img/seta.png" alt="seta">
         </div>
         <div class="info_projeto">
             <div class="num_escondido">
@@ -37,15 +39,15 @@
             <form>
                 <div class="input_nome">
                     <label for="nome">Nome</label>
-                    <input id="nome" type="text" placeholder="Como prefere ser chamado(a)" autocomplete="off">
+                    <input id="nome" type="text" placeholder="Como prefere ser chamado(a)" autocomplete="off" required>
                 </div>
                 <div class="input_telefone">
                     <label for="telefone">Telefone</label>
-                    <input id="telefone" type="text" placeholder="Digite seu número de WhatsApp" autocomplete="off">
+                    <input id="telefone" type="number" placeholder="Digite seu número de WhatsApp" autocomplete="off" required>
                 </div>
                 <div class="input_email">
                     <label for="email">E-mail</label>
-                    <input id="email" type="text" placeholder="Digite seu e-mail" autocomplete="off">
+                    <input id="email" type="text" placeholder="Digite seu e-mail" autocomplete="off" required>
                 </div>
                 <button type="submit">CONTINUAR</button>
             </form>
