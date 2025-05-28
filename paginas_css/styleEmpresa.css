@@ -11,9 +11,8 @@ body{
     user-select: none;
     }
 
-input, button, body, textarea{
-    
-    font-size: 10px;
+input, button, body{
+    font-size: 16px;
     line-height: 2rem;
 }
 
@@ -21,49 +20,70 @@ input, button, body, textarea{
     display: flex;
     margin: 100px auto; 
     width: 100%;
-    max-width: 400px;
-    height: auto;
+    max-width: 37rem;
+    height: 36.75rem; 
+    gap: 32px;
+    padding: 32px;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     border: 1px solid;
-    border-radius: 10px;
-    border-color: #646060c2;
+    border-radius: 6px;
+    border-color: #E1E1E6;
     
 }
 
 .infos{
     display: flex;
-    margin: 20px;
-    gap:30px;
+    justify-content: space-between;
+    width: 528px;
+    height: 44px;
+    gap:8px;
     align-items: center;
 }
 
+
 .info_contato{
     display: flex;
-    justify-content: center;
+    width: 7rem;
+    height: 2.75rem;
+    padding: 0.5rem;
+    justify-content: left;
     align-items: center;
-    flex-wrap: wrap;
-    gap:8px;
+    gap: 0.5rem;
     font-weight: bold;
     
 }
 .info_empresa{
     display: flex;
-    justify-content: center;
+    width: 7rem;
+    height: 2.75rem;
+    padding: 0.5rem;
+    justify-content: left;
     align-items: center;
-    flex-wrap: wrap;
     gap:8px;
     font-weight: bold;
+    color: #1e1e1e8f;
 }
 
 .info_projeto{
     display: flex;
-    justify-content: center;
+    width: 7rem;
+    height: 2.75rem;
+    padding: 0.5rem;
+    justify-content: left;
     align-items: center;
-    flex-wrap: wrap;
     font-weight: bold;
+    color: #1e1e1e8f;
     gap:8px;
+}
+
+.infos img{
+    width: 20px;
+    height: 20px;
+    margin: 0;
+    padding: 0;
+    margin-left: 25px;
 }
 
 .apagado{
@@ -74,11 +94,13 @@ input, button, body, textarea{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 20px;
-    height: 20px;
+    width: 28px;
+    height: 28px;
+    padding: 16px;
+    gap: 10px;
     background-color: #633BBC;
     border-radius: 50%;
-    font-size: 10px;
+    font-size: 14px;
     color: #ffffff;
     text-align: center;
 }
@@ -87,35 +109,39 @@ input, button, body, textarea{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 20px;
-    height: 20px;
-    background-color: #36353893;
+    width: 28px;
+    height: 28px;
+    background-color: #E1E1E6;
+    padding: 16px;
+    gap: 10px;
     border-radius: 50%;
-    font-size: 10px;
-    color: #ffffff;
+    font-size: 14px;
+    color: #36353893;
     text-align: center;
 }
 .num_feito{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 20px;
-    height: 20px;
+    width: 28px;
+    height: 28px;
     background-color: #2b7514;
+    padding: 16px;
+    gap: 10px;
     border-radius: 50%;
-    font-size: 10px;
+    font-size: 14px;
     color: #ffffff;
     text-align: center;
 }
 
 .inputs_dados{
     display: flex;
-    width: 80%;
+    width: 528px;
+    height: 284px;
+    justify-content:initial;
+    gap:16px;
+    padding: 0px;
     
-}
-.infos img{
-    width: 16px;
-    height: 16px;
 }
 
 form label {
@@ -124,37 +150,49 @@ form label {
 
 
 form input{
-    width: 120%;
-    height: 40px ;
+    width: 528px;
+    height: 56px ;
     border: 1.5px solid;
-    border-color: #1e1e1e8c;
-    padding: 8px;
+    border-color: #E1E1E6;
+    padding: 8px 16px;
     border-radius: 2px;
     outline: 0;
 }
 
+.button_container {
+    display: flex;
+    justify-content: space-between;
+}
+
+
 #enviar{
-    width: 120px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    transform: translate(120px);
+    width: 158px;
+    margin-top: 30px;
+    padding: 16px 32px;
+    margin-bottom: 32px;
+    gap: 8px;
     border: none;
     font-weight: bold;
-    border-radius: 4px;
+    border-radius: 6px;
     color: #ffffff;
     background-color: #633BBC;
+    align-self: flex-end;
     
 }
 
 #voltar{
-    width: 90px;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    width: 158px;
+    margin-top: 30px;
+    padding: 16px 32px;
+    margin-bottom: 32px;
+    gap: 8px;
+    border: none;
     font-weight: bold;
-    border-radius: 4px;
+    border-radius: 6px;
     border: 1px solid #633BBC; 
     color: #633BBC;
     background-color: #fefdff;
+    align-self: flex-start;
 
 }
 
@@ -167,13 +205,14 @@ form input:hover{
 }
 
 #seuNegocio{
-    width: 120%;
-    height: 40px ;
+    width: 528px;
+    height: 100px ;
     border: 1.5px solid;
     border-color: #1e1e1e8c;
-    padding: 8px;
+    padding: 8px 16px;
     border-radius: 4px;
     outline: 0;
+    gap: 10px;
     resize: none;
     
 }
@@ -191,4 +230,10 @@ input[type=number] {
     border-color: #c91c1c;
 }
 
-
+hr {
+    border: 1px solid #E1E1E6; 
+    align-self: stretch;
+    
+    width: 528px;
+    height: 0px;
+}

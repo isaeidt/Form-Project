@@ -12,7 +12,7 @@ body{
     }
 
 input, button, body{
-    font-size: 10px;
+    font-size: 16px;
     line-height: 2rem;
 }
 
@@ -20,38 +20,46 @@ input, button, body{
     display: flex;
     margin: 100px auto; 
     width: 100%;
-    max-width: 400px;
-    height: auto;
+    max-width: 37rem;
+    height: 34rem;
+    gap: 32px;
+    padding: 32px;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     border: 1px solid;
     border-radius: 6px;
-    border-color: #646060c2;
+    border-color: #E1E1E6;
     
 }
 
 .infos{
     display: flex;
-    margin: 20px;
-    gap:30px;
+    justify-content: space-between;
+    width: 528px;
+    height: 44px;
+    gap:8px;
     align-items: center;
 }
 
 .info_contato{
     display: flex;
-    justify-content: center;
+    width: 7rem;
+    height: 2.75rem;
+    padding: 0.5rem;
+    justify-content: left;
     align-items: center;
-    flex-wrap: wrap;
-    gap:8px;
+    gap: 0.5rem;
     font-weight: bold;
     
 }
 .info_empresa{
     display: flex;
-    justify-content: center;
+    width: 7rem;
+    height: 2.75rem;
+    padding: 0.5rem;
+    justify-content: left;
     align-items: center;
-    flex-wrap: wrap;
     gap:8px;
     font-weight: bold;
     color: #1e1e1e8f;
@@ -59,23 +67,34 @@ input, button, body{
 
 .info_projeto{
     display: flex;
-    justify-content: center;
+    width: 7rem;
+    height: 2.75rem;
+    padding: 0.5rem;
+    justify-content: left;
     align-items: center;
-    flex-wrap: wrap;
     font-weight: bold;
     color: #1e1e1e8f;
     gap:8px;
+}
+.infos img{
+    width: 20px;
+    height: 20px;
+    margin: 0;
+    padding: 0;
+    margin-left: 25px;
 }
 
 .num {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 20px;
-    height: 20px;
+    width: 28px;
+    height: 28px;
+    padding: 16px;
+    gap: 10px;
     background-color: #633BBC;
     border-radius: 50%;
-    font-size: 10px;
+    font-size: 14px;
     color: #ffffff;
     text-align: center;
 }
@@ -84,35 +103,25 @@ input, button, body{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 20px;
-    height: 20px;
-    background-color: #36353893;
+    width: 28px;
+    height: 28px;
+    background-color: #E1E1E6;
+    padding: 16px;
+    gap: 10px;
     border-radius: 50%;
-    font-size: 10px;
-    color: #ffffff;
-    text-align: center;
-}
-.num_feito{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 20px;
-    height: 20px;
-    background-color: #2b7514;
-    border-radius: 50%;
-    font-size: 10px;
-    color: #ffffff;
+    font-size: 14px;
+    color: #36353893;
     text-align: center;
 }
 
 .inputs_dados{
     display: flex;
-    width: 80%;
+    width: 528px;
+    height: 284px;
+    justify-content:initial;
+    gap:16px;
+    padding: 0px;
     
-}
-.infos img{
-    width: 16px;
-    height: 16px;
 }
 
 form label {
@@ -121,25 +130,33 @@ form label {
 
 
 form input{
-    width: 170%;
-    height: 40px ;
+    width: 528px;
+    height: 56px ;
     border: 1.5px solid;
-    border-color: #1e1e1e8c;
-    padding: 8px;
+    border-color: #E1E1E6;
+    padding: 8px 16px;
     border-radius: 2px;
     outline: 0;
 }
 
+
+.button_container {
+    display: flex;
+    justify-content: flex-end;
+}
+
 form button{
-    width: 90px;
-    margin-top: 20px;
+    width: 158px;
+    margin-top: 56px;
+    padding: 16px 32px;
     margin-bottom: 20px;
-    transform: translate(230px);
+    gap: 8px;
     border: none;
     font-weight: bold;
-    border-radius: 4px;
+    border-radius: 6px;
     color: #ffffff;
     background-color: #633BBC;
+    align-self: flex-end;
 }
 
 form button:hover{
@@ -172,4 +189,10 @@ input[type=number] {
     border-color: #c91c1c;
 }
 
-
+hr {
+    border: 1px solid #E1E1E6; 
+    align-self: stretch;
+    
+    width: 528px;
+    height: 0px;
+}
