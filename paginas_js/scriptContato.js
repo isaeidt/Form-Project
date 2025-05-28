@@ -65,13 +65,13 @@ function verificandoLocalStorage() {
     const localTelefone = localStorage.getItem("Telefone")
     const localEmail = localStorage.getItem("Email")
 
-    if (localNome !== null) {
+    if (inputNome && localNome !== null) {
         inputNome.value = localNome
     }
-    if (localTelefone !== null) {
+    if (inputTelefone && localTelefone !== null) {
         inputTelefone.value = localTelefone
     }
-    if (localEmail !== null) {
+    if (inputEmail && localEmail !== null) {
         inputEmail.value = localEmail
     }
 }
