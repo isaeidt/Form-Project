@@ -11,8 +11,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
 form.addEventListener('submit', (event) => {
     event.preventDefault()
-    salvandoLocalStorage()
+    if (validandoEmpresa()){
+        salvandoLocalStorage()
     window.location.assign("http://127.0.0.1:5500/paginas_html/projeto.html")
+    }
 })
 
 voltar.addEventListener('click', () => {
@@ -40,4 +42,17 @@ function verificandoLocalStorage() {
     if (localSobre !== null) {
         inputSobre.value = localSobre
     }
+}
+
+function validandoEmpresa(){
+    const valorEmpresa = inputEmpresa.value
+    const empresa = document.querySelector('.input_nomeEmpresa')
+    if(valorEmpresa == ""){
+        empresa.classList.add('disable') 
+        return false
+    }else{
+        empresa.classList.remove('disable') 
+    }
+    
+    return true
 }
