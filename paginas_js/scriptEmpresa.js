@@ -18,10 +18,9 @@ form.addEventListener('submit', (event) => {
 })
 
 voltar.addEventListener('click', () => {
-    if (validandoEmpresa()){
         salvandoLocalStorage()
         window.location.assign("http://127.0.0.1:5500/paginas_html/contato.html")
-    }
+    
 })
 
 
