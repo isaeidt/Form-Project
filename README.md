@@ -22,6 +22,9 @@ A aplicação simula uma coleta de dados em três etapas: Contato, Empresa e Pro
 ```bash
 git clone https://github.com/seu-usuario/nome-do-repositorio.git
 ```
+2.  Abra o arquivo contato.html em um navegador moderno.
+3.  Preencha os formulários e siga as etapas.
+   
 ## Observações
 
 Nenhum framework foi utilizado.
