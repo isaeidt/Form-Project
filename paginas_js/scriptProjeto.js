@@ -2,6 +2,10 @@ const form = document.querySelector('form')
 const inputObjetivo = document.querySelector('#objetivo')
 const voltar = document.querySelector('#voltar')
 
+document.addEventListener('DOMContentLoaded', () => {
+    verificandoLocalStorage();
+});
+
 form.addEventListener('submit', (event) =>{
     event.preventDefault()
     salvandoLocalStorage()
@@ -10,6 +14,7 @@ form.addEventListener('submit', (event) =>{
 })
 
 voltar.addEventListener('click', () =>{
+    salvandoLocalStorage()
     window.location.assign("http://127.0.0.1:5500/paginas_html/empresa.html")
 })
 
@@ -36,4 +41,13 @@ function prospostaFinalizada(){
          \nSobre: ${localSobre}
          \nObjetivo: ${localObjetivo}`
     )
+}
+
+function verificandoLocalStorage() {
+    const localObjetivo = localStorage.getItem("Objetivo")
+
+    if (inputObjetivo && localObjetivo !== null) {
+        inputObjetivo.value = localObjetivo
+    }
+
 }

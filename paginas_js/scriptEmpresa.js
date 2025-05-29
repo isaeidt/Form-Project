@@ -13,12 +13,15 @@ form.addEventListener('submit', (event) => {
     event.preventDefault()
     if (validandoEmpresa()){
         salvandoLocalStorage()
-    window.location.assign("http://127.0.0.1:5500/paginas_html/projeto.html")
+        window.location.assign("http://127.0.0.1:5500/paginas_html/projeto.html")
     }
 })
 
 voltar.addEventListener('click', () => {
-    window.location.assign("http://127.0.0.1:5500/paginas_html/contato.html")
+    if (validandoEmpresa()){
+        salvandoLocalStorage()
+        window.location.assign("http://127.0.0.1:5500/paginas_html/contato.html")
+    }
 })
 
 
