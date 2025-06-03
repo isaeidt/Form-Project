@@ -1,60 +1,68 @@
+import { validarFormulario, toggleErro } from './validacoes.js';
 
-const form = document.querySelector('form')
-const inputEmpresa = document.querySelector('#nomeEmpresa')
-const inputFuncionarios = document.querySelector('#funcionarios')
-const inputSobre = document.querySelector('#seuNegocio')
-const voltar = document.querySelector('#voltar')
+const form = document.querySelector('form');
+const inputEmpresa = document.querySelector('#nomeEmpresa');
+const inputFuncionarios = document.querySelector('#funcionarios');
+const inputSobre = document.querySelector('#seuNegocio');
+const voltar = document.querySelector('#voltar');
+
+const STORAGE_KEY = 'contatoForm';
+
+const empresaSchema = {
+  empresa: { required: true },
+  funcionarios: { required: false },
+  sobre: { required: false }
+};
+
 
 document.addEventListener('DOMContentLoaded', () => {
-    verificandoLocalStorage();
+    const data = loadForm();
+    if (inputEmpresa && data.empresa) inputEmpresa.value = data.empresa;
+    if (inputFuncionarios && data.funcionarios) inputFuncionarios.value = data.funcionarios;
+    if (inputSobre && data.sobre) inputSobre.value = data.sobre;
 });
 
 form.addEventListener('submit', (event) => {
-    event.preventDefault()
-    if (validandoEmpresa()){
-        salvandoLocalStorage()
-        window.location.assign("http://127.0.0.1:5500/paginas_html/projeto.html")
-    }
-})
+    event.preventDefault();
+    const data = {
+      empresa: inputEmpresa.value.trim(),
+      funcionarios: inputFuncionarios.value.trim(),
+      sobre: inputSobre.value.trim()
+    };
+    const errors = validarFormulario(data, empresaSchema);
+    exibirErrosNaTela(errors);
+    if (Object.keys(errors).length) return;
+    saveForm(data);
+    window.location.assign("http://127.0.0.1:5500/paginas_html/projeto.html");
+});
 
 voltar.addEventListener('click', () => {
-        salvandoLocalStorage()
-        window.location.assign("http://127.0.0.1:5500/paginas_html/contato.html")
-    
-})
+    saveForm({
+        empresa: inputEmpresa.value.trim(),
+        funcionarios: inputFuncionarios.value.trim(),
+        sobre: inputSobre.value.trim()
+    });
+    window.location.assign("http://127.0.0.1:5500/paginas_html/contato.html");
+});
 
-
-function salvandoLocalStorage(){
-    localStorage.setItem('Empresa', inputEmpresa.value)
-    localStorage.setItem('Funcionarios', inputFuncionarios.value)
-    localStorage.setItem('Sobre', inputSobre.value)
-}
-
-function verificandoLocalStorage() {
-    const localEmpresa = localStorage.getItem("Empresa")
-    const localFuncionarios = localStorage.getItem("Funcionarios")
-    const localSobre = localStorage.getItem("Sobre")
-
-    if (localEmpresa !== null) {
-        inputEmpresa.value = localEmpresa
-    }
-    if (localFuncionarios !== null) {
-        inputFuncionarios.value = localFuncionarios
-    }
-    if (localSobre !== null) {
-        inputSobre.value = localSobre
+function loadForm() {
+    try {
+        return JSON.parse(localStorage.getItem(STORAGE_KEY)) || {};
+    } catch {
+        return {};
     }
 }
 
-function validandoEmpresa(){
-    const valorEmpresa = inputEmpresa.value
-    const empresa = document.querySelector('.input_nomeEmpresa')
-    if(valorEmpresa == ""){
-        empresa.classList.add('disable') 
-        return false
-    }else{
-        empresa.classList.remove('disable') 
-    }
-    
-    return true
+function saveForm(patch) {
+    const current = loadForm();
+    localStorage.setItem(
+        STORAGE_KEY,
+        JSON.stringify({ ...current, ...patch })
+    );
+}
+
+function exibirErrosNaTela(errors) {
+  toggleErro(inputEmpresa, errors.empresa);
+  toggleErro(inputFuncionarios, errors.funcionarios);
+  toggleErro(inputSobre, errors.sobre);
 }
